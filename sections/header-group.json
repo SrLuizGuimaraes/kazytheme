@@ -1,1 +1,82 @@
-{"type":"header","name":"Header group","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"message-1":{"type":"message","settings":{"text":"Enviamos para todo o Brasil"}},"message_MrAhDh":{"type":"message","settings":{"text":"10% off na 1º compra - cupom WELCOME"}},"message_UqkrBT":{"type":"message","settings":{"text":"FRETE GRátis a partir de 499,99"}}},"block_order":["message-1","message_MrAhDh","message_UqkrBT"],"settings":{"enable_sticky":false,"autoplay":true,"cycle_speed":4,"desktop_font_size":11,"mobile_font_size":10,"background":"#1c1c1c","text_color":"#ffffff"}},"header":{"type":"header","custom_css":[],"settings":{"enable_sticky":true,"show_separation_border":false,"reduce_padding":true,"logo":"shopify:\/\/shop_images\/kazylogohd.png","logo_max_width":140,"logo_mobile_max_width":100,"menu":"main-menu","sidebar_menu":"main-menu","menu_open_trigger":"hover","enable_search":true,"sidebar_text_font":"heading","sidebar_show_dividers":false,"layout":"logo_center_navigation_below","show_icons":true,"show_country_selector":true,"show_country_name":false,"show_country_flag":true,"show_locale_selector":false,"transparent_header_text_color":"#000000","transparent_logo":"shopify:\/\/shop_images\/kazylogohd.png"}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message-1": {
+          "type": "message",
+          "settings": {
+            "text": "Enviamos para todo o Brasil"
+          }
+        },
+        "message_MrAhDh": {
+          "type": "message",
+          "settings": {
+            "text": "10% off na 1º compra - cupom PRIMEIRACOMPRA"
+          }
+        },
+        "message_UqkrBT": {
+          "type": "message",
+          "settings": {
+            "text": "FRETE GRátis a partir de 499,99"
+          }
+        }
+      },
+      "block_order": [
+        "message-1",
+        "message_MrAhDh",
+        "message_UqkrBT"
+      ],
+      "settings": {
+        "enable_sticky": false,
+        "autoplay": true,
+        "cycle_speed": 4,
+        "desktop_font_size": 11,
+        "mobile_font_size": 10,
+        "background": "#1c1c1c",
+        "text_color": "#ffffff"
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [],
+      "settings": {
+        "enable_sticky": true,
+        "show_separation_border": false,
+        "reduce_padding": true,
+        "logo": "shopify://shop_images/kazylogohd.png",
+        "logo_max_width": 140,
+        "logo_mobile_max_width": 100,
+        "menu": "main-menu",
+        "sidebar_menu": "main-menu",
+        "menu_open_trigger": "hover",
+        "enable_search": true,
+        "sidebar_text_font": "heading",
+        "sidebar_show_dividers": false,
+        "layout": "logo_center_navigation_below",
+        "show_icons": true,
+        "show_country_selector": true,
+        "show_country_name": false,
+        "show_country_flag": true,
+        "show_locale_selector": false,
+        "transparent_header_text_color": "#000000",
+        "transparent_logo": "shopify://shop_images/kazylogohd.png"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
