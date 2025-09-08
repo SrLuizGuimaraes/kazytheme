@@ -213,21 +213,10 @@
             "link_url": "",
             "link_text": "Explore Mais"
           }
-        },
-        "collection_gVCyiX": {
-          "type": "collection",
-          "settings": {
-            "collection": "news",
-            "products_count": 8,
-            "title": "",
-            "link_url": "",
-            "link_text": "Explore Mais"
-          }
         }
       },
       "block_order": [
-        "collection_DJ3VaT",
-        "collection_gVCyiX"
+        "collection_DJ3VaT"
       ],
       "settings": {
         "separate_section_with_border": false,
