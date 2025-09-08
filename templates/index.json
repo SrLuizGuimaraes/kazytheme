@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Banner_DeskTop.png",
-            "mobile_image": "shopify://shop_images/Kazy_-_Banner_mobile_15b4a3e1-759f-4756-a9a4-32ca27d14768.png",
+            "mobile_image": "shopify://shop_images/Banner_Mobile.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
