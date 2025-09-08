@@ -15,7 +15,7 @@
         "slide-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_Kazy_Desk_Top_bd944636-05ab-40d5-a9a5-3bbdd7134d3a.png",
+            "image": "shopify://shop_images/Banner_DeskTop.png",
             "mobile_image": "shopify://shop_images/Kazy_-_Banner_mobile_15b4a3e1-759f-4756-a9a4-32ca27d14768.png",
             "subheading": "",
             "title": "",
@@ -23,7 +23,7 @@
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 780,
             "button_1_text": "",
-            "button_1_link": "shopify://collections/impacto",
+            "button_1_link": "shopify://collections/semana-do-cliente",
             "button_1_style": "link",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
