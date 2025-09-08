@@ -201,6 +201,35 @@
         "circle_button_text_color": "#1c1c1c"
       }
     },
+    "featured_collections_67W7DM": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_FJjq6K": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_FJjq6K"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "<a href=\"/collections/semana-do-cliente\" target=\"_blank\" title=\"Semana do Cliente\">Semana do Cliente</a>"
+      }
+    },
     "featured_collections_zKxEg7": {
       "type": "featured-collections",
       "blocks": {
@@ -335,6 +364,7 @@
   "order": [
     "slideshow",
     "collection-list",
+    "featured_collections_67W7DM",
     "featured_collections_zKxEg7",
     "featured_collections_yghmHA",
     "featured_collections_MN46FK",
