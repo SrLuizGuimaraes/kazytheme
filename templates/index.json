@@ -132,14 +132,14 @@
         "collection-2": {
           "type": "collection",
           "settings": {
-            "collection": "shorts",
-            "image": "shopify://shop_images/361.jpg",
+            "collection": "short-saia",
+            "image": "shopify://shop_images/2_9da2e9b7-e48e-4bac-bd1b-82731c84e876.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "Short",
-            "button_link": "",
+            "button_text": "Short Saia",
+            "button_link": "shopify://collections/short-saia",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
