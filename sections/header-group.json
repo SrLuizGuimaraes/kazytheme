@@ -55,7 +55,7 @@
         "enable_sticky": true,
         "show_separation_border": false,
         "reduce_padding": true,
-        "logo": "shopify://shop_images/kazy.png",
+        "logo": "shopify://shop_images/kazycinza.png",
         "logo_max_width": 160,
         "logo_mobile_max_width": 110,
         "menu": "main-menu",
@@ -71,7 +71,7 @@
         "show_country_flag": true,
         "show_locale_selector": false,
         "transparent_header_text_color": "#ffffff",
-        "transparent_logo": "shopify://shop_images/kazycinza.png"
+        "transparent_logo": "shopify://shop_images/kazy_8c6956f0-0f88-45d0-a111-e2c3b3dc4d3e.png"
       }
     }
   },
