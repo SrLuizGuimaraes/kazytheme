@@ -173,45 +173,6 @@
         "circle_button_text_color": "#1c1c1c"
       }
     },
-    "featured_collections_zKxEg7": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_DJ3VaT": {
-          "type": "collection",
-          "settings": {
-            "collection": "sale",
-            "products_count": 8,
-            "title": "",
-            "link_url": "",
-            "link_text": "Explore Mais"
-          }
-        },
-        "collection_CfFXKT": {
-          "type": "collection",
-          "settings": {
-            "collection": "news",
-            "products_count": 8,
-            "title": "",
-            "link_url": "",
-            "link_text": "Explore Mais"
-          }
-        }
-      },
-      "block_order": [
-        "collection_DJ3VaT",
-        "collection_CfFXKT"
-      ],
-      "settings": {
-        "separate_section_with_border": false,
-        "hide_product_information": false,
-        "stack_products": false,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": ""
-      }
-    },
     "featured_collections_yghmHA": {
       "type": "featured-collections",
       "blocks": {
@@ -228,6 +189,34 @@
       },
       "block_order": [
         "collection_aJTdgy"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_zKxEg7": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_CfFXKT": {
+          "type": "collection",
+          "settings": {
+            "collection": "news",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "Explore Mais"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CfFXKT"
       ],
       "settings": {
         "separate_section_with_border": false,
@@ -313,15 +302,45 @@
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": true
       }
+    },
+    "featured_collections_CJg8LM": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_M9XWCx": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_M9XWCx"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "Featured collection"
+      }
     }
   },
   "order": [
     "slideshow",
     "collection-list",
-    "featured_collections_zKxEg7",
     "featured_collections_yghmHA",
+    "featured_collections_zKxEg7",
     "featured_collections_MN46FK",
     "rich_text_tmX6PX",
-    "174439792515fdee62"
+    "174439792515fdee62",
+    "featured_collections_CJg8LM"
   ]
 }
