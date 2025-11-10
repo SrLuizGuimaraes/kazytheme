@@ -63,8 +63,7 @@
         "show_country_name": false,
         "show_country_flag": true,
         "show_locale_selector": false,
-        "transparent_header_text_color": "#ffffff",
-        "transparent_logo": "shopify://shop_images/kazy_8c6956f0-0f88-45d0-a111-e2c3b3dc4d3e.png"
+        "transparent_header_text_color": "#ffffff"
       }
     }
   },
