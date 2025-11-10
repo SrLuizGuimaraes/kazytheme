@@ -179,6 +179,16 @@
         "collection_DJ3VaT": {
           "type": "collection",
           "settings": {
+            "collection": "sale",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "Explore Mais"
+          }
+        },
+        "collection_CfFXKT": {
+          "type": "collection",
+          "settings": {
             "collection": "news",
             "products_count": 8,
             "title": "",
@@ -188,7 +198,8 @@
         }
       },
       "block_order": [
-        "collection_DJ3VaT"
+        "collection_DJ3VaT",
+        "collection_CfFXKT"
       ],
       "settings": {
         "separate_section_with_border": false,
