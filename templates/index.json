@@ -42,7 +42,7 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_Kazy_Desk_Top_0bed8c02-9852-4130-b2e4-acc466d47cfb.png",
+            "image": "shopify://shop_images/Banner_Kazy_Desk_Top_1_38aa73b9-94bb-4aee-bfaf-bbca66381f4f.png",
             "mobile_image": "shopify://shop_images/Kazy_-_Banner_mobile_4_04c53d2e-21e2-4f9a-8a24-7b57e32edcd0.png",
             "subheading": "",
             "title": "",
@@ -53,12 +53,12 @@
             "button_1_link": "shopify://collections/sintonia",
             "button_1_style": "link",
             "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
+            "button_1_text_color": "#ffffff",
             "button_2_text": "",
             "button_2_link": "shopify://collections/masculino",
             "button_2_style": "outline",
             "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
+            "button_2_text_color": "#ffffff",
             "background": "",
             "background_opacity": 50,
             "text_color": "#ffffff",
