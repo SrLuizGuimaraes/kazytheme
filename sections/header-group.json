@@ -20,12 +20,6 @@
             "text": "Enviamos para todo o Brasil"
           }
         },
-        "message_MrAhDh": {
-          "type": "message",
-          "settings": {
-            "text": "10% off na 1º compra - cupom KAZY"
-          }
-        },
         "message_UqkrBT": {
           "type": "message",
           "settings": {
@@ -35,7 +29,6 @@
       },
       "block_order": [
         "message-1",
-        "message_MrAhDh",
         "message_UqkrBT"
       ],
       "settings": {
