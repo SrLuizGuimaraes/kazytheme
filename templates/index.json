@@ -302,35 +302,6 @@
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": true
       }
-    },
-    "featured_collections_CJg8LM": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_M9XWCx": {
-          "type": "collection",
-          "settings": {
-            "collection": "sale",
-            "products_count": 8,
-            "title": "",
-            "link_url": "",
-            "link_text": "View all"
-          }
-        }
-      },
-      "block_order": [
-        "collection_M9XWCx"
-      ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
-      "settings": {
-        "separate_section_with_border": true,
-        "hide_product_information": false,
-        "stack_products": false,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "Featured collection"
-      }
     }
   },
   "order": [
@@ -340,7 +311,6 @@
     "featured_collections_zKxEg7",
     "featured_collections_MN46FK",
     "rich_text_tmX6PX",
-    "174439792515fdee62",
-    "featured_collections_CJg8LM"
+    "174439792515fdee62"
   ]
 }
