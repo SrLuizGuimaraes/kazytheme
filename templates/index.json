@@ -203,21 +203,6 @@
     },
     "featured_collections_3Kb4k6": {
       "type": "featured-collections",
-      "blocks": {
-        "collection_g9dpC3": {
-          "type": "collection",
-          "settings": {
-            "collection": "sale",
-            "products_count": 8,
-            "title": "",
-            "link_url": "",
-            "link_text": "EXPLORAR MAIS"
-          }
-        }
-      },
-      "block_order": [
-        "collection_g9dpC3"
-      ],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
         "separate_section_with_border": true,
