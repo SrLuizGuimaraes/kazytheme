@@ -15,15 +15,15 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_Kazy_Desk_Top_7.png",
-            "mobile_image": "shopify://shop_images/Kazy_-_Banner_mobile_6.png",
+            "image": "shopify://shop_images/Banner_Kazy_pc.png",
+            "mobile_image": "shopify://shop_images/Banner_Kazy_mobile.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 540,
             "button_1_text": "",
-            "button_1_link": "shopify://collections/holiday",
+            "button_1_link": "shopify://collections/essencia",
             "button_1_style": "link",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#ffffff",
