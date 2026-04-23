@@ -135,8 +135,7 @@ Supported variables
 {% assign installments_value = product.price | divided_by: 4 | round: 2 %}
 
 <div class="ProductItem__PaymentInfo" style="font-size:13px;">
-{% comment %}
-  
+{% comment %} DESCONTO EM PIX - DESATIVADO
 <p class="ProductItem__Price">
     <span style="font-weight: bold;">{{ pix_discounted_price | money }}</span> no Pix
   </p> {% endcomment %}
