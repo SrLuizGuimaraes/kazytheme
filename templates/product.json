@@ -88,7 +88,7 @@
             "show_below_gallery": false
           }
         },
-        "liquid_3HziTN": {
+        "liquid_WJKELn": {
           "type": "liquid",
           "settings": {
             "liquid": "{% render 'upsell-products-snippet' %}"
@@ -107,7 +107,7 @@
         "buy_buttons",
         "separator",
         "description",
-        "liquid_3HziTN"
+        "liquid_WJKELn"
       ],
       "settings": {
         "container_size": "lg",
@@ -125,7 +125,6 @@
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
         "separate_section_with_border": true,
         "hide_product_information": false,
