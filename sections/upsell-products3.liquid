@@ -5,21 +5,38 @@
   assign shown_ids = ''
   assign random_seed = 'now' | date: '%s' | modulo: 1000
 
-  # Lógica de adaptação para a página de produtos
   assign current_product_id = product.id | default: 0
-  assign products_to_exclude = cart_product_ids
 
-  # Se estiver na página de produto, adiciona o produto atual à lista de exclusão
+  # Monta string de IDs a excluir (carrinho + produto atual)
+  assign exclude_ids = ''
+  for item in cart.items
+    assign exclude_ids = exclude_ids | append: item.product_id | append: ','
+  endfor
   if current_product_id != 0
-    assign products_to_exclude = products_to_exclude | push: current_product_id
+    assign exclude_ids = exclude_ids | append: current_product_id | append: ','
   endif
 
-  # Define as coleções a serem usadas. Mantendo a lista original, mas idealmente deveria ser configurável no schema.
-  assign collection_handles = "tops,calcas,blusas,conjuntos,conjuntos" | split: ","
+  # Define as coleções
+  assign collection_handles = "tops,calcas,blusas,conjuntos" | split: ","
 
-  # Condição para exibir a seção:
-  # 1. Se estiver na página do carrinho (cart.item_count > 0) E a configuração permitir
-  # 2. OU se estiver na página de produto (current_product_id != 0) E a configuração permitir
+  # Coleta todos os produtos elegíveis de todas as coleções
+  assign all_candidates = ''
+
+  for handle in collection_handles
+    assign col_products = collections[handle].products | where: "available", true
+    for p in col_products
+      assign pid_str = p.id | append: ''
+      unless exclude_ids contains pid_str
+        unless all_candidates contains pid_str
+          assign all_candidates = all_candidates | append: pid_str | append: ','
+        endunless
+      endunless
+    endfor
+  endfor
+
+  assign candidate_list = all_candidates | split: ','
+  assign candidate_count = candidate_list | size
+
   assign should_display = false
   if cart.item_count > 0 and section.settings.show_on_cart
     assign should_display = true
@@ -127,76 +144,76 @@
     </div>
 
     <div class="upsell-products-grid upsell-carousel">
-      {% for handle in collection_handles %}
+      {%- liquid
+        assign offset = random_seed | modulo: candidate_count | default: 0
+      -%}
+
+      {% for i in (0..100) %}
         {%- liquid
           if displayed_products_count >= max_products_to_display
             break
           endif
+          if i >= candidate_count
+            break
+          endif
 
-          assign collection_products = collections[handle].products | where: "available", true
-          # Usa a lista de exclusão adaptada
-          assign filtered_products = collection_products | reject: "id", products_to_exclude
-          assign collection_size = filtered_products.size
+          assign pick_index = offset | plus: i | modulo: candidate_count
+          assign picked_id = candidate_list[pick_index]
         -%}
 
-        {% if collection_size > 0 %}
+        {% if picked_id != blank %}
           {%- liquid
-            assign start_index = random_seed | plus: displayed_products_count | modulo: collection_size
-            assign upsell_product = filtered_products[start_index]
-
-            if shown_ids contains upsell_product.id
-              continue
-            endif
-
-            assign shown_ids = shown_ids | append: upsell_product.id | append: ','
-            assign displayed_products_count = displayed_products_count | plus: 1
+            assign upsell_product = all_products[picked_id]
           -%}
 
-          <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
-            <div class="upsell-product-image">
-              <a href="{{ upsell_product.url }}">
-                {% if upsell_product.featured_image %}
-                  <img src="{{ upsell_product.featured_image | image_url: width: 300 }}"
-                       alt="{{ upsell_product.featured_image.alt | default: upsell_product.title }}"
-                       loading="lazy">
-                {% endif %}
-              </a>
-            </div>
-
-            <div class="upsell-product-info">
-              <h4 class="upsell-product-title">
-                <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
-              </h4>
-
-              <div class="upsell-product-price">
-                {% if upsell_product.compare_at_price > upsell_product.price %}
-                  <span class="upsell-price-compare">{{ upsell_product.compare_at_price | money }}</span>
-                {% endif %}
-                <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
+          {% if upsell_product != blank %}
+            {%- assign displayed_products_count = displayed_products_count | plus: 1 -%}
+            <div class="upsell-product-card" data-product-id="{{ upsell_product.id }}">
+              <div class="upsell-product-image">
+                <a href="{{ upsell_product.url }}">
+                  {% if upsell_product.featured_image %}
+                    <img src="{{ upsell_product.featured_image | image_url: width: 300 }}"
+                         alt="{{ upsell_product.featured_image.alt | default: upsell_product.title }}"
+                         loading="lazy">
+                  {% endif %}
+                </a>
               </div>
 
-              <form method="post" action="/cart/add">
-                {% if upsell_product.variants.size > 1 %}
-                  <select name="id" class="upsell-variant-selector">
-                    {% for variant in upsell_product.variants %}
-                      {% if variant.available %}
-                        <option value="{{ variant.id }}">{{ variant.title }} – {{ variant.price | money }}</option>
-                      {% else %}
-                        <option value="{{ variant.id }}" disabled>{{ variant.title }} – Esgotado</option>
-                      {% endif %}
-                    {% endfor %}
-                  </select>
-                {% else %}
-                  <input type="hidden" name="id" value="{{ upsell_product.variants.first.id }}">
-                {% endif %}
+              <div class="upsell-product-info">
+                <h4 class="upsell-product-title">
+                  <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
+                </h4>
 
-                <button type="submit"
-                        class="button button--primary button--full">
-                  {{ section.settings.button_text }}
-                </button>
-              </form>
+                <div class="upsell-product-price">
+                  {% if upsell_product.compare_at_price > upsell_product.price %}
+                    <span class="upsell-price-compare">{{ upsell_product.compare_at_price | money }}</span>
+                  {% endif %}
+                  <span class="upsell-price-current">{{ upsell_product.price | money }}</span>
+                </div>
+
+                <form method="post" action="/cart/add">
+                  {% if upsell_product.variants.size > 1 %}
+                    <select name="id" class="upsell-variant-selector">
+                      {% for variant in upsell_product.variants %}
+                        {% if variant.available %}
+                          <option value="{{ variant.id }}">{{ variant.title }} – {{ variant.price | money }}</option>
+                        {% else %}
+                          <option value="{{ variant.id }}" disabled>{{ variant.title }} – Esgotado</option>
+                        {% endif %}
+                      {% endfor %}
+                    </select>
+                  {% else %}
+                    <input type="hidden" name="id" value="{{ upsell_product.variants.first.id }}">
+                  {% endif %}
+
+                  <button type="submit"
+                          class="button button--primary button--full">
+                    {{ section.settings.button_text }}
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
+          {% endif %}
         {% endif %}
       {% endfor %}
     </div>
