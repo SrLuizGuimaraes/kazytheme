@@ -130,17 +130,6 @@
         "max_image_zoom_level": 3
       }
     },
-    "custom_liquid_CQDCTG": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
-      "settings": {
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "{% render 'upsell-products-snippet' %}",
-        "text_alignment": "center"
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -177,7 +166,6 @@
   },
   "order": [
     "main",
-    "custom_liquid_CQDCTG",
     "related-products",
     "177819197802e674d9"
   ]
