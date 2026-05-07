@@ -131,10 +131,22 @@
         "title": "você também pode gostar",
         "content": ""
       }
+    },
+    "custom_liquid_MWxXKJ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "{% render 'upsell-products-snippet' %}",
+        "text_alignment": "center"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "custom_liquid_MWxXKJ"
   ]
 }
