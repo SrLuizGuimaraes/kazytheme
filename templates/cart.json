@@ -19,20 +19,23 @@
         "show_shipping_estimator": false
       }
     },
-    "custom_liquid_E4LX9x": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+    "upsell_products_m6Q48V": {
+      "type": "upsell-products",
+      "name": "Upsell de Produtos",
       "settings": {
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "{% render 'upsell-products-snippet' %}",
-        "text_alignment": "center"
+        "show_on_cart": true,
+        "show_on_product": true,
+        "max_products": 6,
+        "title": "Você também pode gostar",
+        "subtitle": "Produtos recomendados para você",
+        "button_text": "ADICIONAR",
+        "button_bg_color": "#AE002D",
+        "button_text_color": "#ffffff"
       }
     }
   },
   "order": [
     "main",
-    "custom_liquid_E4LX9x"
+    "upsell_products_m6Q48V"
   ]
 }
