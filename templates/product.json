@@ -87,12 +87,6 @@
             "collapse_content": false,
             "show_below_gallery": false
           }
-        },
-        "liquid_WJKELn": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "{% render 'upsell-products-snippet' %}"
-          }
         }
       },
       "block_order": [
@@ -106,8 +100,7 @@
         "complementary_products",
         "buy_buttons",
         "separator",
-        "description",
-        "liquid_WJKELn"
+        "description"
       ],
       "settings": {
         "container_size": "lg",
