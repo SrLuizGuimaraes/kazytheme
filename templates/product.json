@@ -143,7 +143,6 @@
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
         "separate_section_with_border": true,
         "hide_product_information": false,
