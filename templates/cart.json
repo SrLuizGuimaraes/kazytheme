@@ -25,11 +25,11 @@
       "settings": {
         "show_on_cart": true,
         "show_on_product": true,
-        "max_products": 6,
+        "max_products": 4,
         "title": "Você também pode gostar",
         "subtitle": "Produtos recomendados para você",
         "button_text": "ADICIONAR",
-        "button_bg_color": "#AE002D",
+        "button_bg_color": "#ae002d",
         "button_text_color": "#ffffff"
       }
     }
