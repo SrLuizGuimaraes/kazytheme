@@ -97,7 +97,7 @@
         "liquid_NCx8QW": {
           "type": "liquid",
           "settings": {
-            "liquid": "{% render 'upsell-products-snippet' %}"
+            "liquid": "{% render 'upsell-products' %}"
           }
         }
       },
