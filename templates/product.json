@@ -87,6 +87,12 @@
             "collapse_content": false,
             "show_below_gallery": false
           }
+        },
+        "liquid_3HziTN": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% render 'upsell-products-snippet' %}"
+          }
         }
       },
       "block_order": [
@@ -100,7 +106,8 @@
         "complementary_products",
         "buy_buttons",
         "separator",
-        "description"
+        "description",
+        "liquid_3HziTN"
       ],
       "settings": {
         "container_size": "lg",
@@ -131,22 +138,10 @@
         "title": "você também pode gostar",
         "content": ""
       }
-    },
-    "custom_liquid_MWxXKJ": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
-      "settings": {
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "{% render 'upsell-products-snippet' %}",
-        "text_alignment": "center"
-      }
     }
   },
   "order": [
     "main",
-    "related-products",
-    "custom_liquid_MWxXKJ"
+    "related-products"
   ]
 }
