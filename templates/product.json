@@ -12,6 +12,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "liquid_qbCkVM": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% render 'upsell-products-snippet' %}"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -90,6 +96,7 @@
         }
       },
       "block_order": [
+        "liquid_qbCkVM",
         "title",
         "price",
         "liquid_tCyYHG",
