@@ -93,6 +93,12 @@
             "collapse_content": false,
             "show_below_gallery": false
           }
+        },
+        "liquid_NCx8QW": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% render 'upsell-products-snippet' %}"
+          }
         }
       },
       "block_order": [
@@ -107,7 +113,8 @@
         "complementary_products",
         "buy_buttons",
         "separator",
-        "description"
+        "description",
+        "liquid_NCx8QW"
       ],
       "settings": {
         "container_size": "lg",
