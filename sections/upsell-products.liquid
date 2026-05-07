@@ -1,6 +1,6 @@
 {%- liquid
   assign cart_product_ids = cart.items | map: 'product_id'
-  assign max_products_to_display = section.settings.max_products | default: 10
+  assign max_products_to_display = section.settings.max_products | default: 6
   assign displayed_products_count = 0
   assign shown_ids = ''
   assign random_seed = 'now' | date: '%s' | modulo: 1000
