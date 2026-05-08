@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "icon_stroke_width": 1.5,
+    "icon_stroke_width": 1,
     "section_vertical_spacing": "md",
     "text_color": "#1c1c1c",
     "background": "#f2f2f2",
