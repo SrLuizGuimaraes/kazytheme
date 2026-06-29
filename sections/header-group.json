@@ -20,12 +20,6 @@
             "text": "10% OFF I CUPOM : WELCOME"
           }
         },
-        "message_UqkrBT": {
-          "type": "message",
-          "settings": {
-            "text": "FRETE GRátis a partir de 499,99"
-          }
-        },
         "message_3wxVtF": {
           "type": "message",
           "settings": {
@@ -35,7 +29,6 @@
       },
       "block_order": [
         "message-1",
-        "message_UqkrBT",
         "message_3wxVtF"
       ],
       "settings": {
