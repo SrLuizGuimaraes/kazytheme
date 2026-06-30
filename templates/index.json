@@ -184,13 +184,32 @@
             "button_background": "#f2f2f2",
             "button_text_color": "#000000"
           }
+        },
+        "collection_xRxF9R": {
+          "type": "collection",
+          "settings": {
+            "collection": "mais-vendidos",
+            "image": "shopify://shop_images/Kazy_-_Categoria_site_5.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Mais Vendidos",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "button_background": "#f2f2f2",
+            "button_text_color": "#000000"
+          }
         }
       },
       "block_order": [
         "collection-4",
         "collection_yj4KgW",
         "collection-1",
-        "collection-6"
+        "collection-6",
+        "collection_xRxF9R"
       ],
       "custom_css": [
         "{margin-top: 2%;}",
