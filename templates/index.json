@@ -170,13 +170,13 @@
         "collection-6": {
           "type": "collection",
           "settings": {
-            "collection": "casacos",
-            "image": "shopify://shop_images/29_f4fa116a-43c2-4c5a-8f44-0cbf93dbebc7.png",
+            "collection": "tops",
+            "image": "shopify://shop_images/Kazy_-_Categoria_site_3.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "Casacos",
+            "button_text": "Tops",
             "button_link": "",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
