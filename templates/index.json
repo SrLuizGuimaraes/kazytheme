@@ -149,50 +149,16 @@
             "button_text_color": "#000000"
           }
         },
-        "collection_pBaFqE": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "",
-            "title": "",
-            "button_text": "View products",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "button_background": "",
-            "button_text_color": ""
-          }
-        },
-        "collection_Tn4jjM": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "",
-            "title": "",
-            "button_text": "View products",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "button_background": "",
-            "button_text_color": ""
-          }
-        },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "tops",
-            "image": "shopify://shop_images/25_6039f3e6-43e2-4579-afbd-732d4ef9dfe3.png",
+            "collection": "blusas",
+            "image": "shopify://shop_images/Kazy_-_Categoria_site_2.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "Tops",
+            "button_text": "Blusas",
             "button_link": "",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -241,8 +207,6 @@
       "block_order": [
         "collection-4",
         "collection_yj4KgW",
-        "collection_pBaFqE",
-        "collection_Tn4jjM",
         "collection-1",
         "collection-6",
         "collection-2"
