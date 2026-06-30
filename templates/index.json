@@ -122,7 +122,7 @@
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "calças",
+            "button_text": "Macacão",
             "button_link": "",
             "text_color": "#ffffff",
             "overlay_color": "rgba(0,0,0,0)",
@@ -140,13 +140,47 @@
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "Blusas",
+            "button_text": "Calças",
             "button_link": "",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "button_background": "#f2f2f2",
             "button_text_color": "#000000"
+          }
+        },
+        "collection_pBaFqE": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "collection_Tn4jjM": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "button_background": "",
+            "button_text_color": ""
           }
         },
         "collection-1": {
@@ -207,6 +241,8 @@
       "block_order": [
         "collection-4",
         "collection_yj4KgW",
+        "collection_pBaFqE",
+        "collection_Tn4jjM",
         "collection-1",
         "collection-6",
         "collection-2"
