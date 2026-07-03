@@ -26,6 +26,7 @@
     "modal_text_color": "#1c1c1c",
     "product_rating_color": "#1c1c1c",
     "product_on_sale_accent": "#2E4A34",
+    "product_custom_badge_background": "#1c1c1c",
     "heading_font": "montserrat_n4",
     "heading_letter_spacing": 18,
     "text_font": "montserrat_n4",
