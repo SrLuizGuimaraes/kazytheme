@@ -82,6 +82,54 @@
         "controls_color": "#ffffff"
       }
     },
+    "custom_liquid_wTgYdH": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": true,
+        "liquid": "<style>\n  .beneficios-custom .beneficios__wrap {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    gap: 24px;\n    max-width: 1100px;\n    margin: 0 auto;\n  }\n  .beneficios-custom .beneficio {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    flex: 1 1 220px;\n    max-width: 260px;\n    text-align: left;\n  }\n  .beneficios-custom .beneficio__icon {\n    width: 40px;\n    height: 40px;\n    object-fit: contain;\n    flex-shrink: 0;\n  }\n  .beneficios-custom .beneficio__title {\n    font-weight: 600;\n    font-size: 0.85rem;\n    line-height: 1.2;\n    margin: 0;\n    text-transform: uppercase;\n    letter-spacing: 0.02em;\n  }\n  .beneficios-custom .beneficio__text {\n    font-size: 0.78rem;\n    line-height: 1.2;\n    margin: 3px 0 0;\n    opacity: 0.75;\n  }\n  @media (max-width: 749px) {\n    .beneficios-custom .beneficios__wrap { gap: 16px; }\n    .beneficios-custom .beneficio { flex: 1 1 45%; max-width: none; }\n  }\n</style>\n\n<div class=\"beneficios-custom\">\n  <div class=\"beneficios__wrap\">\n    <div class=\"beneficio\">\n      <img class=\"beneficio__icon\" src=\"COLE_AQUI_URL_ICONE_1\" alt=\"Entregamos para todo o Brasil\">\n      <div class=\"beneficio__content\">\n        <p class=\"beneficio__title\">Entregamos para todo o Brasil</p>\n        <p class=\"beneficio__text\">Envio imediato</p>\n      </div>\n    </div>\n\n    <div class=\"beneficio\">\n      <img class=\"beneficio__icon\" src=\"COLE_AQUI_URL_ICONE_2\" alt=\"Frete Grátis para todo o Brasil\">\n      <div class=\"beneficio__content\">\n        <p class=\"beneficio__title\">Frete Grátis para todo o Brasil</p>\n        <p class=\"beneficio__text\">Em compras a partir de R$499,90</p>\n      </div>\n    </div>\n\n    <div class=\"beneficio\">\n      <img class=\"beneficio__icon\" src=\"COLE_AQUI_URL_ICONE_3\" alt=\"Zero Transparência\">\n      <div class=\"beneficio__content\">\n        <p class=\"beneficio__title\">Zero Transparência</p>\n        <p class=\"beneficio__text\">Tecido premium</p>\n      </div>\n    </div>\n\n    <div class=\"beneficio\">\n      <img class=\"beneficio__icon\" src=\"COLE_AQUI_URL_ICONE_4\" alt=\"Site Confiável\">\n      <div class=\"beneficio__content\">\n        <p class=\"beneficio__title\">Site Confiável</p>\n        <p class=\"beneficio__text\">Compre com segurança</p>\n      </div>\n    </div>\n  </div>\n</div>",
+        "text_alignment": "center"
+      }
+    },
+    "rich_text_m4RTgX": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_kgMw7r": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_gAdPnF": {
+          "type": "heading",
+          "settings": {
+            "text": "Escolha por Categoria",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_7DqmYg": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_kgMw7r",
+        "heading_gAdPnF",
+        "richtext_7DqmYg"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
     "collection-list": {
       "type": "collection-list",
       "blocks": {
@@ -348,6 +396,8 @@
   },
   "order": [
     "slideshow",
+    "custom_liquid_wTgYdH",
+    "rich_text_m4RTgX",
     "collection-list",
     "featured_collections_3Kb4k6",
     "featured_collections_yghmHA",
