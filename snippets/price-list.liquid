@@ -39,7 +39,7 @@ Supported variables
   endcase
 -%}
 
-<price-list {% if form_id %}role="region" aria-live="polite"{% endif %} class="price-list {% if context == 'product' %}price-list--product{% endif %}">
+<price-list {% if form_id %}role="region" aria-live="polite"{% endif %} class="price-list {% if context == 'product' %}price-list--product{% endif %}{% if context == 'card' %} price-list--card{% endif %}">
   {%- if variant != blank -%}
     {%- comment -%}
     --------------------------------------------------------------------------------------------------------------------
@@ -124,7 +124,7 @@ Supported variables
       {%- if settings.product_price_strategy == 'from_price' -%}
         <sale-price class="{% if is_variant_on_sale %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
           <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
-          {{- 'product.price.from_price_html' | t: price_min: variant_price -}}
+          {{- variant_price -}}
         </sale-price>
       {%- else -%}
         <sale-price class="{{ on_sale_price_classes }}">
