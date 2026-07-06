@@ -133,7 +133,8 @@
   "platform_customizations": {
     "custom_css": [
       ".price-list--card sale-price {font-size: 1.15em;}",
-      ".price-list--card compare-at-price {font-size: 0.85em;}"
+      ".price-list--card compare-at-price {font-size: 0.85em;}",
+      ".price-list--card compare-at-price {color: rgb(60, 60, 60); opacity: 1;}"
     ]
   }
 }
