@@ -39,7 +39,7 @@ Supported variables
   endcase
 -%}
 
-<price-list {% if form_id %}role="region" aria-live="polite"{% endif %} class="price-list {% if context == 'product' %}price-list--product{% endif %}">
+<price-list {% if form_id %}role="region" aria-live="polite"{% endif %} class="price-list {% if context == 'product' %}price-list--product{% endif %}{% if context == 'card' %} price-list--card{% endif %}">
   {%- if variant != blank -%}
     {%- comment -%}
     --------------------------------------------------------------------------------------------------------------------
