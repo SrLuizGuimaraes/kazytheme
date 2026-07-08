@@ -84,7 +84,6 @@
     },
     "custom_liquid_wTgYdH": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
         "separate_section_with_border": true,
