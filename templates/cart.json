@@ -23,6 +23,7 @@
       "type": "upsell-products",
       "name": "Upsell de Produtos",
       "settings": {
+        "upsell_collection": "mais-vendidos",
         "show_on_cart": true,
         "show_on_product": true,
         "max_products": 4,
