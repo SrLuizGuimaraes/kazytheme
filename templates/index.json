@@ -290,6 +290,52 @@
         "subheading": ""
       }
     },
+    "slideshow_FiXU3x": {
+      "type": "slideshow",
+      "blocks": {
+        "image_jCRyqE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_desk_-_Kazy.png",
+            "mobile_image": "shopify://shop_images/Banner_Mobile_Kazy_700_x_700_px.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_jCRyqE"
+      ],
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
+    },
     "featured_collections_zKxEg7": {
       "type": "featured-collections",
       "blocks": {
@@ -400,6 +446,7 @@
     "collection-list",
     "featured_collections_3Kb4k6",
     "featured_collections_yghmHA",
+    "slideshow_FiXU3x",
     "featured_collections_zKxEg7",
     "featured_collections_MN46FK",
     "rich_text_tmX6PX",
