@@ -1,143 +1,167 @@
-{%- unless request.page_type == 'captcha' or section.settings.show_only_on_index and template != 'index' -%}
-  {%- unless section.settings.show_only_for_visitors and customer -%}
-    {%- assign posted_successfully = false -%}
-    {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
+{%- assign cupom = 'WELCOME' -%}
+{%- assign desconto = '10% OFF' -%}
 
-    {%- capture temporary -%}
-      {%- form 'customer', id: newsletter_id, class: 'form' -%}
-        {%- assign posted_successfully = form.posted_successfully? -%}
-      {%- endform -%}
-    {%- endcapture -%}
+<style>
+  .kz-pop__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+  }
+  .kz-pop__overlay.is-open { display: flex; }
 
-    <newsletter-popup class="pop-in newsletter-popup" {% if section.settings.show_only_once %}only-once{% endif %} apparition-delay="{{ section.settings.apparition_delay }}" {% if posted_successfully %}open{% endif %} handle-editor-events style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
-      <button class="pop-in__close-button tap-area" is="dialog-close-button">
-        <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
-        {%- render 'icon' with 'close' -%}
-      </button>
+  .kz-pop__box {
+    background: #ffffff;
+    max-width: 380px;
+    width: 100%;
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  }
+  .kz-pop__close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #5d6361;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .kz-pop__title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #5d6361;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+  .kz-pop__sub {
+    font-size: 0.9rem;
+    color: #5d6361;
+    opacity: 0.8;
+    margin: 0 0 20px;
+    line-height: 1.4;
+  }
+  .kz-pop__btn {
+    background: #5d6361;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    transition: opacity 0.2s;
+  }
+  .kz-pop__btn:hover { opacity: 0.85; }
 
-      <div class="v-stack gap-8">
-        {%- if section.settings.title != blank or section.settings.content != blank -%}
-          <div class="v-stack gap-4 text-center">
-            {%- if section.settings.title != blank -%}
-              <p class="h4">{{ section.settings.title }}</p>
-            {%- endif -%}
+  .kz-pop__reveal { display: none; }
+  .kz-pop__reveal.is-visible { display: block; }
 
-            {%- if section.settings.content != blank -%}
-              <div class="prose">
-                {{ section.settings.content }}
-              </div>
-            {%- endif -%}
-          </div>
-        {%- endif -%}
+  .kz-pop__code {
+    background: #e4e3e8;
+    color: #5d6361;
+    padding: 14px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin: 0 0 12px;
+    cursor: pointer;
+    user-select: all;
+  }
+  .kz-pop__hint {
+    font-size: 0.75rem;
+    color: #5d6361;
+    opacity: 0.7;
+    margin: 0;
+  }
+  .kz-pop__frete {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #e4e3e8;
+    font-size: 0.78rem;
+    color: #5d6361;
+    opacity: 0.85;
+  }
+</style>
 
-        {%- form 'customer', id: newsletter_id, class: 'form' -%}
-          {%- if form.posted_successfully? -%}
-            {%- capture success_message -%}{{ 'general.newsletter.subscribed_successfully' | t }}{%- endcapture -%}
-            {%- render 'banner', content: success_message, status: 'success', text_alignment: 'center' -%}
+<div class="kz-pop__overlay" id="kzPop">
+  <div class="kz-pop__box">
+    <button class="kz-pop__close" aria-label="Fechar">&times;</button>
 
-            <script>
-              localStorage.setItem('theme:popup-filled', 'true');
-            </script>
-          {%- else -%}
-            {%- if form.errors -%}
-              {%- assign content = form.errors | default_errors -%}
-              {%- render 'banner', status: 'error', content: content, text_alignment: 'center' -%}
-            {%- endif -%}
+    <div class="kz-pop__step1">
+      <p class="kz-pop__title">Você ganhou {{ desconto }} na sua primeira compra!</p>
+      <p class="kz-pop__sub">Aproveite agora e garanta seu desconto.</p>
+      <button class="kz-pop__btn" id="kzPopReveal">Resgatar agora</button>
+    </div>
 
-            <div class="fieldset">
-              <input type="hidden" name="contact[tags]" value="newsletter">
+    <div class="kz-pop__reveal" id="kzPopCode">
+      <p class="kz-pop__title">Seu cupom está pronto</p>
+      <p class="kz-pop__code">{{ cupom }}</p>
+      <p class="kz-pop__hint">Toque no código para copiar e use no checkout.</p>
+      <button class="kz-pop__btn" id="kzPopShop" style="margin-top:16px;">Continuar comprando</button>
+    </div>
 
-              {%- assign label = 'blog.comments.email' | t -%}
-              {%- render 'input', type: 'email', name: 'contact[email]', label: label, value: customer.email, required: true, autocomplete: 'email' -%}
-            </div>
+    <p class="kz-pop__frete">Frete grátis nas compras acima de R$ 599,90</p>
+  </div>
+</div>
 
-            {%- render 'button', content: section.settings.button_text, type: 'submit', background: section.settings.button_background, text_color: section.settings.button_text_color -%}
-          {%- endif -%}
-        {%- endform -%}
-      </div>
-    </newsletter-popup>
-  {%- endunless -%}
-{%- endunless -%}
+<script>
+  (function () {
+    var pop = document.getElementById('kzPop');
+    if (!pop) { return; }
 
-{% schema %}
-{
-  "name": "t:sections.newsletter_popup.name",
-  "class": "shopify-section--popup",
-  "settings": [
-    {
-      "type": "paragraph",
-      "content": "t:sections.newsletter_popup.instructions"
-    },
-    {
-      "type": "range",
-      "id": "apparition_delay",
-      "min": 0,
-      "max": 15,
-      "step": 1,
-      "unit": "sec",
-      "label": "t:sections.newsletter_popup.delay",
-      "default": 5
-    },
-    {
-      "type": "checkbox",
-      "id": "show_only_on_index",
-      "label": "t:sections.newsletter_popup.show_only_on_home_page",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "hide_for_account_holders",
-      "label": "t:sections.newsletter_popup.hide_for_account_holders",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_only_once",
-      "label": "t:sections.newsletter_popup.show_only_once",
-      "default": true
-    },
-    {
-      "type": "inline_richtext",
-      "id": "title",
-      "label": "t:global.text.heading",
-      "default": "Signup for our newsletter"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "content",
-      "label": "t:global.text.content",
-      "default": "Describe what your customers will receive when subscribing to your newsletter."
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "t:global.text.button_text",
-      "default": "Subscribe"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:global.colors.background",
-      "default": "#1c1c1c"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.colors.text",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "button_background",
-      "label": "t:global.colors.button_background",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "t:global.colors.button_text",
-      "default": "#1c1c1c"
+    var KEY = 'kazy_pop_visto';
+
+    // só mostra no primeiro acesso
+    try {
+      if (localStorage.getItem(KEY)) { return; }
+    } catch (e) {}
+
+    function marcarVisto() {
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
     }
-  ]
-}
-{% endschema %}
+
+    function fechar() {
+      pop.classList.remove('is-open');
+      marcarVisto();
+    }
+
+    // abre depois de 2 segundos
+    setTimeout(function () { pop.classList.add('is-open'); }, 2000);
+
+    pop.querySelector('.kz-pop__close').addEventListener('click', fechar);
+
+    pop.addEventListener('click', function (e) {
+      if (e.target === pop) { fechar(); }
+    });
+
+    document.getElementById('kzPopReveal').addEventListener('click', function () {
+      pop.querySelector('.kz-pop__step1').style.display = 'none';
+      document.getElementById('kzPopCode').classList.add('is-visible');
+      marcarVisto();
+    });
+
+    document.getElementById('kzPopShop').addEventListener('click', fechar);
+
+    var code = pop.querySelector('.kz-pop__code');
+    code.addEventListener('click', function () {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(code.textContent.trim());
+        var hint = pop.querySelector('.kz-pop__hint');
+        hint.textContent = 'Código copiado!';
+      }
+    });
+  })();
+</script>
