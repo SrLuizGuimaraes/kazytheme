@@ -236,7 +236,7 @@
           "type": "collection",
           "settings": {
             "collection": "mais-vendidos",
-            "image": "shopify://shop_images/Kazy_-_Categoria_site_5.png",
+            "image": "shopify://shop_images/Categorias_Site_Kazy.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
