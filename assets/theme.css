@@ -7705,3 +7705,30 @@ button[name="add"]:hover {
   background-color: #345A42 !important;
   border-color: #345A42 !important;
 }
+/* BOTÃO ADICIONAR AO CARRINHO */
+.product-form button[type="submit"],
+.product-form__submit,
+.quick-add__submit,
+.quick-add button[type="submit"],
+button[name="add"],
+.add-to-cart,
+button.add-to-cart {
+  background: #3F6B4F !important;
+  background-color: #3F6B4F !important;
+  color: #FFFFFF !important;
+  border-color: #3F6B4F !important;
+}
+
+/* HOVER */
+.product-form button[type="submit"]:hover,
+.product-form__submit:hover,
+.quick-add__submit:hover,
+.quick-add button[type="submit"]:hover,
+button[name="add"]:hover,
+.add-to-cart:hover,
+button.add-to-cart:hover {
+  background: #345A42 !important;
+  background-color: #345A42 !important;
+  color: #FFFFFF !important;
+  border-color: #345A42 !important;
+}
