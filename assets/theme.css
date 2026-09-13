@@ -7693,3 +7693,15 @@ ul {
   display: -webkit-box;
   overflow: hidden;
 }
+.product-form__submit,
+button[name="add"] {
+  background-color: #3F6B4F !important;
+  color: #ffffff !important;
+  border-color: #3F6B4F !important;
+}
+
+.product-form__submit:hover,
+button[name="add"]:hover {
+  background-color: #345A42 !important;
+  border-color: #345A42 !important;
+}
