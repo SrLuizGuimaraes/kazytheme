@@ -202,7 +202,7 @@
             "collection": "tops",
             "image": "shopify://shop_images/Categorias_Site_Kazy_1.png",
             "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
+            "content_position": "place-self-start text-start",
             "subheading": "",
             "title": "",
             "button_text": "Tops",
