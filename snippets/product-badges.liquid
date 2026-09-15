@@ -59,18 +59,10 @@ Supported variables
           {%- endif -%}
 
           {%- if product.compare_at_price > product.price -%}
-            {%- if settings.discount_mode == 'percentage' -%}
-              {%- assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%' -%}
-            {%- else -%}
-              {%- capture savings -%}{{ variant.compare_at_price | minus: variant.price | money }}{%- endcapture -%}
-            {%- endif -%}
+            {%- assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%' -%}
 
             <on-sale-badge {% if form_id != blank and is_variant_on_sale == false %}hidden{% endif %} {% if settings.show_discount %}discount-mode="{{ settings.discount_mode | escape }}"{% endif %} {% if form_id != blank %}form="{{ form_id }}"{% endif %} class="badge badge--on-sale">
-              {%- if form_id == blank and is_variant_on_sale == false or product.compare_at_price_varies -%}
-                {{- 'product.general.on_sale_badge' | t -}}
-              {%- else -%}
-                {{- 'product.general.discount_badge_html' | t: savings: savings -}}
-              {%- endif -%}
+              {{- 'product.general.discount_badge_html' | t: savings: savings -}}
             </on-sale-badge>
           {%- endif -%}
         {%- endif -%}
