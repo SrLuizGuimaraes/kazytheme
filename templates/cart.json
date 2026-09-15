@@ -23,7 +23,7 @@
     "main": {
       "type": "main-cart",
       "custom_css": [
-        "button[name=\"checkout\"] {background: #2E4A34; color: #fff;}"
+        "button[name=\"checkout\"] {background: #2e4a34; color: #fff;}"
       ],
       "settings": {
         "show_cart_note": false,
@@ -35,6 +35,9 @@
     },
     "upsell_products_m6Q48V": {
       "type": "upsell-products",
+      "custom_css": [
+        ".upsell-product-info button.button--primary {--button-background: #2E4A34 !important; --button-text-color: #FFFFFF !important; background: #2E4A34 !important; background-color: #2E4A34 !important; border-color: #2E4A34 !important; color: #FFFFFF !important;}"
+      ],
       "name": "Upsell de Produtos",
       "settings": {
         "upsell_collection": "mais-vendidos",
