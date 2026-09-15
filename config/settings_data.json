@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "frete_dinamico_btn": "#2E4A34",
     "icon_stroke_width": 1,
     "section_vertical_spacing": "md",
     "text_color": "#1c1c1c",

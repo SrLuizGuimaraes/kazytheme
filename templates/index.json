@@ -174,8 +174,8 @@
             "text_color": "#ffffff",
             "overlay_color": "rgba(0,0,0,0)",
             "overlay_opacity": 0,
-            "button_background": "#f2f2f2",
-            "button_text_color": "#000000"
+            "button_background": "#2E4A34",
+            "button_text_color": "#FFFFFF"
           }
         },
         "collection_yj4KgW": {
@@ -192,8 +192,8 @@
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "button_background": "#f2f2f2",
-            "button_text_color": "#000000"
+            "button_background": "#2E4A34",
+            "button_text_color": "#FFFFFF"
           }
         },
         "collection-6": {
@@ -202,7 +202,7 @@
             "collection": "tops",
             "image": "shopify://shop_images/Categorias_Site_Kazy_1.png",
             "expand_collection": false,
-            "content_position": "place-self-start text-start",
+            "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
             "button_text": "Tops",
@@ -210,8 +210,8 @@
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "button_background": "#f2f2f2",
-            "button_text_color": "#000000"
+            "button_background": "#2E4A34",
+            "button_text_color": "#FFFFFF"
           }
         },
         "collection-1": {
@@ -228,8 +228,8 @@
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "button_background": "#f2f2f2",
-            "button_text_color": "#000000"
+            "button_background": "#2E4A34",
+            "button_text_color": "#FFFFFF"
           }
         },
         "collection_xRxF9R": {
@@ -246,8 +246,8 @@
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "button_background": "#f2f2f2",
-            "button_text_color": "#000000"
+            "button_background": "#2E4A34",
+            "button_text_color": "#FFFFFF"
           }
         }
       },
@@ -258,14 +258,11 @@
         "collection-1",
         "collection_xRxF9R"
       ],
-      "custom_css": [
-        "{margin-top: 2%;}",
-        ".collection-list {gap: var(--collection-list-gap, 5px);"
-      ],
+      "custom_css": [],
       "settings": {
         "separate_section_with_border": false,
         "image_size": "auto",
-        "show_text_outside": true,
+        "show_text_outside": false,
         "space_items": false,
         "stack_collections": false,
         "collections_per_row_desktop": 5,
