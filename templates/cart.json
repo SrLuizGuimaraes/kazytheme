@@ -22,6 +22,9 @@
     },
     "main": {
       "type": "main-cart",
+      "custom_css": [
+        "button[name=\"checkout\"] {background: #2E4A34; color: #fff;}"
+      ],
       "settings": {
         "show_cart_note": false,
         "show_order_weight": false,
