@@ -96,6 +96,7 @@
         },
         "upsell_app_by_essentialwolf_app_block_88zdd9": {
           "type": "shopify://apps/upsell-app-by-essentialwolf/blocks/app-block/ae950cb1-1eb5-4b22-b308-ab5141c9f88c",
+          "disabled": true,
           "settings": {}
         },
         "liquid_NCx8QW": {
