@@ -65,8 +65,8 @@
         "complementary_products": {
           "type": "complementary_products",
           "settings": {
-            "title": "Pairs well with",
-            "products_count": 2,
+            "title": "<strong>CRIE O SEU CONJUNTO!</strong>",
+            "products_count": 5,
             "show_below_gallery": true,
             "stack_products": false,
             "show_quick_buy": true
@@ -77,7 +77,7 @@
           "settings": {
             "show_payment_button": false,
             "show_gift_card_recipient": false,
-            "atc_button_background": "#2E4A34",
+            "atc_button_background": "#2e4a34",
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
