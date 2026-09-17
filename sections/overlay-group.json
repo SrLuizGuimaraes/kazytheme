@@ -28,6 +28,7 @@
     },
     "privacy-banner": {
       "type": "privacy-banner",
+      "disabled": true,
       "settings": {
         "title": "🍪 Cookie policy",
         "content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>",
