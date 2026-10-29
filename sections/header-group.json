@@ -37,7 +37,7 @@
         "cycle_speed": 4,
         "desktop_font_size": 11,
         "mobile_font_size": 10,
-        "background": "#939393",
+        "background": "#000000",
         "text_color": "#ffffff"
       }
     },
