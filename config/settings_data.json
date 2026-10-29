@@ -19,7 +19,7 @@
     "error_color": "#cb2b2b",
     "header_background": "#000000",
     "header_text_color": "#FFFFFF",
-    "footer_background": "#939393",
+    "footer_background": "#000000",
     "footer_text_color": "#ffffff",
     "primary_button_background": "#939393",
     "primary_button_text_color": "#ffffff",
