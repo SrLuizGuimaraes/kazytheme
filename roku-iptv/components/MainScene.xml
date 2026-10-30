@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+    <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+    <children>
+        <Rectangle id="bg" width="1280" height="720" color="0x0B1020FF" />
+        <Label id="title" text="IPTV Brasil" translation="[60,30]" width="1100" height="50" />
+        <LabelList id="list" translation="[60,100]" itemSize="[1100,48]" numRows="11" visible="false" />
+        <Label id="status" text="Carregando canais..." translation="[60,320]" width="1100" height="60" />
+        <Video id="video" translation="[0,0]" width="1280" height="720" visible="false" />
+    </children>
+</component>
