@@ -15,8 +15,8 @@
         "image_6D3z3a": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_Kazy_pc_052d745a-8abb-4886-84ed-5c43f933edc8.png",
-            "mobile_image": "shopify://shop_images/Banner_Kazy_mobile_ff97c298-dca7-4e98-8499-603130cf932b.png",
+            "image": "shopify://shop_images/Banner_Kazy_PC_jpg.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Kazy_mobile_eb6883d0-50fc-40cc-bf33-2cf8ed7112a8.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
